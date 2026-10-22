@@ -376,7 +376,7 @@ class PhpSecInfo_Test
 			return 0;
 		}
 
-		$last = strtolower($val{strlen($val)-1});
+		$last = strtolower(substr($val, -1));
 		switch($last) {
 			// The 'G' modifier is available since PHP 5.1.0
 			case 'g':
