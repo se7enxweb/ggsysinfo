@@ -1,16 +1,39 @@
 {
     "name": "gggeek/ggsysinfo",
+    "description": "System information for Exponential administrators and developers: PHP and opcode cache panels, cache, storage, log and content statistics, system status checks with JSON output, QA checks and developer listings of modules, views, fetch functions, policies and template operators.",
     "type": "ezpublish-legacy-extension",
-    "description": "Allows eZ Publish administrators and developers to have better insight into their working installation",
+    "keywords": ["exponential", "exponential-extension", "ezpublish-legacy", "admin", "system information", "monitoring", "phpinfo", "opcache", "logs", "cache"],
+    "homepage": "https://github.com/se7enxweb/ggsysinfo",
     "license": "GPL-2.0-or-later",
-    "homepage": "http://projects.ez.no/ggsysinfo",
+    "authors": [
+        {
+            "name": "Gaetano Giunta",
+            "homepage": "https://github.com/gggeek",
+            "role": "Original author"
+        },
+        {
+            "name": "7x",
+            "homepage": "https://se7enx.com",
+            "email": "info@se7enx.com",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/se7enxweb/ggsysinfo/issues",
+        "source": "https://github.com/se7enxweb/ggsysinfo"
+    },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": ">=5.3",
-        "ezsystems/ezpublish-legacy-installer": "*",
+        "php": ">=8.0",
+        "se7enxweb/ezpublish-legacy-installer": "*",
         "zetacomponents/graph": ">=1.5.2"
     },
     "require-dev": {
         "gggeek/ezextensionbuilder": "*"
+    },
+    "extra": {
+        "installer-name": "ggsysinfo",
+        "ezpublish-legacy-extension-name": "ggsysinfo"
     }
 }
