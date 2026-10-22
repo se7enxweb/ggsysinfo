@@ -1,0 +1,11 @@
+Changes from 0.10.2 to 0.10.3 - released 2026-10-22
+
+Renamed: the Composer package is `se7enxweb/ggsysinfo`. Before 0.10.3 it was published as `gggeek/ggsysinfo`, the
+  name of the original package, which Packagist builds from the original author's repository, so the maintained
+  releases could not be installed under it. composer.json declares `"replace": {"gggeek/ggsysinfo": "self.version"}`,
+  so the two names are never installed side by side
+
+Improved: README.md uses the new name in every install and upgrade command and explains how to switch:
+  `composer remove gggeek/ggsysinfo && composer require se7enxweb/ggsysinfo`, or change the require line
+
+No code or settings changed.

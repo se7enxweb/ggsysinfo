@@ -42,7 +42,7 @@ It is meant for:
 
 ### With Composer
 
-The package keeps its published name, `gggeek/ggsysinfo`. This maintained copy lives at
+The package is `se7enxweb/ggsysinfo`. This maintained copy lives at
 https://github.com/se7enxweb/ggsysinfo; add it as a repository in your project's `composer.json` so Composer takes
 the maintained releases:
 
@@ -57,10 +57,18 @@ the maintained releases:
 Then, in the root of your installation:
 
 ```bash
-composer require gggeek/ggsysinfo:^0.10.2
+composer require se7enxweb/ggsysinfo:^0.10.3
 ```
 
 The legacy extension installer puts the files in `extension/ggsysinfo`.
+
+### Package name
+
+Before 0.10.3 this extension was published as `gggeek/ggsysinfo`, the name of Gaetano Giunta's original package.
+Since 0.10.3 the maintained releases are published as `se7enxweb/ggsysinfo`, which replaces `gggeek/ggsysinfo`, so
+the two are never installed side by side. To switch, run
+`composer remove gggeek/ggsysinfo && composer require se7enxweb/ggsysinfo`, or change the line in the `require`
+section of your `composer.json` to `"se7enxweb/ggsysinfo": "^0.10.3"` and run `composer update se7enxweb/ggsysinfo`.
 
 ### By hand
 
@@ -307,7 +315,7 @@ There are no cron jobs.
 
 ## Upgrading
 
-Replace the `extension/ggsysinfo` directory (or run `composer update gggeek/ggsysinfo`), regenerate the autoloads
+Replace the `extension/ggsysinfo` directory (or run `composer update se7enxweb/ggsysinfo`), regenerate the autoloads
 and clear the caches, as in step 3 of the installation. Keep your settings in
 `settings/override/sysinfo.ini.append.php` so that an upgrade never overwrites them. The changes of each release are
 in [doc/changelogs](doc/changelogs).
